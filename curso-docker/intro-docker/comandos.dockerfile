@@ -60,3 +60,14 @@
 # - Verificar comandos disponiveis do volume `docker volume —help`
 # - `docker volume ls` visualizar lista
 # - comando para visualizar o volume (local) `docker volume inspect 26adead80a1def1f40453f866c5067b5dc2059fdeff9d68347da9a95bc2ac5bd`
+
+# Exercicio
+# 1. `docker container run --name ubuntu-allumy -it ubuntu /bin/bash` criar , dentro do container: rodar # `apt-get update` atualizar a lista de pacotes, #`apt-get install nginx` instalar nginx, #`/etc/init.d/nginx start` inhttps://intranet-homologacao.policiamilitar.mg.gov.br/saude/app/saude/int/fat/cadContaHospitalar.actioniciar servidor, depois sair do servidor sem fechar Ctrl + P + Q,  `docker container inspect ubuntu-allumy`  verificar a porta
+# 2. Após criar um container e criar lista de pacotes `docker container commit ubuntu-allumy ubuntu-allumy` rodar esse comando para criar uma image, 
+    
+#     ![image.png](attachment:f3d718e9-3f7e-4feb-8b85-4702dbd7616b:image.png)
+    
+# 3. remover o container e image: `docker container rm -f ubuntu-allumy`  `docker image rm ubuntu-allumy`
+# 4. recuperar `docker image load -i ubuntu-allumy.tar`  
+# 5. Rodar container: `docker container run -it ubuntu-allumy sh`  `/etc/init.d/nginx start`
+# 6. verificar se pegou o IP e se funcionar o acesso: docker container inspect (nome do container)
